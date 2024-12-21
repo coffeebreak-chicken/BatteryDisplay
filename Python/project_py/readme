@@ -1,0 +1,22 @@
+project_py配下で以下コマンド（cmd）
+#移動
+cd C:\Users\Student\Documents\BatteryDisplayPy\project_py
+
+#アクティブ化
+.\project_env\Scripts\activate
+
+#非アクティブ化
+deactivate
+
+
+#仮想環境の選択
+1.仮想環境化でwhere pythonを実行すると実行用PythonのPATHが表示される
+2.PATHをコピー後、Windowsの場合Ctrl+Shift+Pを押下するとVSCode上部に検索ボックスが出るため、検索に
+   >Python: Select Interpreterを入力
+    -> インタープリターの選択
+     -> インタープリター パスを入力...
+      -> 入力ボックスにコピーしたPythonパスをペーストすると仮想環境のインタープリターが設定できます。
+
+仮想環境のパス  C:\Users\Student\Documents\BatteryDisplayPy\project_py\project_env\Scripts\python.exe
+（参照）
+https://qiita.com/shun_sakamoto/items/7944d0ac4d30edf91fde#%E8%A3%9C%E8%B6%B3-vscode%E3%81%A7%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%E4%BB%AE%E6%83%B3%E7%92%B0%E5%A2%83%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95
