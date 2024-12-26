@@ -33,7 +33,7 @@ $timer = New-Object System.Windows.Forms.Timer
 	$label.Size = New-Object System.Drawing.Size(230, 80)
 	
 	# フォントを設定（フォント名, サイズ, スタイル）
-	$label.Font = New-Object System.Drawing.Font("Arrial", 13, [System.Drawing.FontStyle]::Bold)
+	$label.Font = New-Object System.Drawing.Font("Arrial", 10, $form.Font.Style)
 # ここまで初期表示
 
 # タイマーのTickイベントに更新処理を追加
@@ -45,7 +45,7 @@ $timer.Add_Tick({
 	$label.Size = New-Object System.Drawing.Size(230, 80)
 	
 	# フォントを設定（フォント名, サイズ, スタイル）
-	$label.Font = New-Object System.Drawing.Font("Arrial", 13, [System.Drawing.FontStyle]::Bold)
+	$label.Font = New-Object System.Drawing.Font("Arrial", 10, $form.Font.Style)
 })
 
 # 10秒ごとに更新
