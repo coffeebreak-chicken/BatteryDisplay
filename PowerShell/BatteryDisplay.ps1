@@ -5,7 +5,7 @@ Add-Type -AssemblyName System.Drawing
 # フォームを作成
 $form = New-Object System.Windows.Forms.Form
 $form.Text = 'バッテリー残量'
-$form.Size = New-Object System.Drawing.Size(280, 100)
+$form.Size = New-Object System.Drawing.Size(160, 60)
 # $form.StartPositionn = 'CenterScreen'
 
 # フォームの初期位置を左上に設定
@@ -30,7 +30,7 @@ $timer = New-Object System.Windows.Forms.Timer
 	$InitCharge = Get-CimInstance -ClassName Win32_Battery | Select-Object -ExpandProperty EstimatedChargeRemaining
 	$CurrentCharge = "Current Charge: $InitCharge %."
 	$label.Text = "$CurrentCharge"
-	$label.Size = New-Object System.Drawing.Size(230, 80)
+	$label.Size = New-Object System.Drawing.Size(150, 40)
 	
 	# フォントを設定（フォント名, サイズ, スタイル）
 	$label.Font = New-Object System.Drawing.Font("Arrial", 10, $form.Font.Style)
@@ -42,7 +42,7 @@ $timer.Add_Tick({
 	$charge = Get-CimInstance -ClassName Win32_Battery | Select-Object -ExpandProperty EstimatedChargeRemaining
 	$CurrentCharge = "Current Charge: $charge %."
 	$label.Text = "$CurrentCharge"
-	$label.Size = New-Object System.Drawing.Size(230, 80)
+	$label.Size = New-Object System.Drawing.Size(150, 40)
 	
 	# フォントを設定（フォント名, サイズ, スタイル）
 	$label.Font = New-Object System.Drawing.Font("Arrial", 10, $form.Font.Style)
