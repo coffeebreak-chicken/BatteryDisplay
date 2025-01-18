@@ -43,6 +43,8 @@ $timer.Add_Tick({
 	$CurrentCharge = "Current Charge: $charge %."
 	$label.Text = "$CurrentCharge"
 	$label.Size = New-Object System.Drawing.Size(150, 40)
+	# フォームの表示位置を「最前列」に指定 もう一遍
+	$form.Topmost = $true
 	
 	# フォントを設定（フォント名, サイズ, スタイル）
 	$label.Font = New-Object System.Drawing.Font("Arrial", 10, $form.Font.Style)
